@@ -1,0 +1,179 @@
+@import "Blog.css";
+@import "Navbar.css";
+@import "Footer.css";
+
+h1 {
+	font-size: 3.5em;
+}
+h4 {
+	font-size: 2em;
+}
+
+a {
+	color: grey;
+	text-decoration: none;
+	outline: none;
+}
+
+#grid-container {
+	display: grid;
+	grid-template-rows: minmax(50px, auto);
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	gap: 4px;
+	grid-template-areas: "nb nb" "mc c1" "mc c2" "c3 c4" "ft ft";
+}
+
+#main-card {
+	grid-area: mc;
+	background-image: url("../photos/island.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	background-position: center;
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	color: #fffaf0;
+}
+.btn {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.33em;
+	width: 100px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	margin: 20px 0;
+	padding: 1px 0;
+}
+
+.card-link {
+	color: #fffaf0;
+	text-decoration: none;
+	outline: none;
+}
+
+.card-link:hover {
+	color: #00ffff;
+}
+
+.card {
+	display: flex;
+	min-height: 20%;
+	align-items: center;
+	justify-content: center;
+	color: #fffaf0;
+	border-color: black;
+}
+#go-blue:hover {
+	color: blue;
+	padding: 10px;
+}
+
+#go-white {
+	color: white;
+	padding-left: 20px;
+}
+
+#card-1 {
+	grid-area: c1;
+	padding: 0;
+	background-image: url("../photos/drop.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#card-2 {
+	grid-area: c2;
+	padding: 0;
+	background-image: url("../photos/cric.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin: 0;
+}
+
+#card-3 {
+	grid-area: c3;
+	padding: 0;
+	background-image: url("../photos/fox.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 230px;
+	margin: 0;
+}
+
+#card-4 {
+	grid-area: c4;
+	padding: 0;
+	background-image: url("../photos/football.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 270px;
+	margin: 0;
+}
+
+#p-nato {
+	font-family: 'Noto Serif', serif;
+}
+#p-rale {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.2em;
+	line-height: 1.9em;
+}
+
+.card-display {
+	background-color: rgba(0, 0, 0, 0.6);
+	margin: 10px;
+	padding: 10px 10px;
+	max-width: 550px;
+	min-width: 40%;
+	text-align: center;
+	border-radius: 20px 20px;
+}
+
+.btn-next {
+	/*font-family: 'Roboto', sans-serif;*/
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	font-family: 'Anton', sans-serif;
+	/*border: 1px solid #000000;*/
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+}
+
+@media (min-width: 550px) and (max-width: 1250px) {
+	.card h4 {
+		font-size: 1.2em;
+	}
+
+	.card .author-name {
+		font-size: 0.6em;
+	}
+
+	.card-display {
+		padding: 6px 18px;
+		margin: 2px;
+	}
+}
+@media (max-width: 600px) {
+	#grid-container {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 50px 400px 200px 200px 200px 200px 30px;
+		gap: 3px;
+		grid-template-areas: "nb " "mc" "c1" "c2" "c3" "c4" "ft";
+	}
+	#card-display {
+		display: flex;
+		flex-shrink: 2;
+	}
+}

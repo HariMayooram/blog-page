@@ -1,0 +1,105 @@
+nav {
+	grid-area: nb;
+	background-color: black;
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+	height: 5%;
+	flex-direction: row;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+#navbar-logo {
+	display: flex;
+	font-size: 2em;
+	flex-flow: row wrap;
+	width: 10%;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	overflow: hidden;
+	margin-left: 0;
+	font-weight: 700;
+	color: white;
+	font-family: 'Bangers', cursive;
+	letter-spacing: 0.08em;
+}
+
+#navbar-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+}
+
+nav ul {
+	margin-left: 4px;
+	margin-right: 4px;
+	font-size: 1.4em;
+}
+
+li {
+	padding: 0 2.5px;
+	font-size: 1em;
+}
+
+.navbar-bttns {
+	text-align: end;
+	margin: 8px;
+}
+
+.navbar-bttns > a {
+	color: white;
+	padding: 4px 18px;
+	border-radius: 3px;
+	justify-content: space-between;
+}
+
+.navbar-bttns > a:hover {
+	color: black;
+	background-color: #fffaf0;
+	border: 2px solid #fffaf0;
+}
+
+.navbar-bttns > a:active {
+	color: white;
+	background-color: #fffaf0;
+	border: 2px solid #fffaf0;
+}
+.navbar-right {
+	text-align: end;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+@media (min-width: 100px) {
+	nav {
+		height: 50px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+
+	#navbar-logo {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
+		width: 30%;
+	}
+
+	#navbar-menu {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-end;
+		align-items: center;
+		width: 72%;
+	}
+
+	nav ul {
+		font-size: 15px;
+		margin: 4px;
+	}
+}
